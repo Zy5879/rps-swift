@@ -10,17 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         let rps: Array<String> = ["🪨", "📄", "✂️"]
-        VStack {
+        VStack() {
+            Text("RPS GAME")
+                .bold()
+                .font(.largeTitle)
+            Spacer()
             Text("🤖")
                 .font(.system(size: 60))
-            HStack {
+                Spacer()
+            HStack(spacing:30) {
                 ForEach(rps, id: \.self) { rps in
                     Text(rps).font(.system(size: 60))
                 }
                 
             }
             .padding()
-            
+            Spacer()
         }
     }
 }
